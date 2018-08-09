@@ -14,7 +14,14 @@ $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATUR
 $events = $bot->parseEventRequest(file_get_contents('php://input'), $signature);
 // 配列に格納された各イベントをループで処理
 foreach ($events as $event) {
+
+	$replyText = $event->getText();
+	if($replyText == '開発者の名前'){
+		$replyText == '株式会社アップロードの村井です。';
+	}
+
+
   // テキストを返信
-	$bot->replyText($event->getReplyToken(), $event->getText());
+	$bot->replyText($event->getReplyToken(),$replyText);
 }
 ?>
