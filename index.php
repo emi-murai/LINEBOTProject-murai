@@ -17,7 +17,7 @@ foreach ($events as $event) {
 
 	$replyText = $event->getText();
 	if($replyText == '開発者の名前'){
-		$replyText == '株式会社アップロードの村井です。';
+		$replyText = '株式会社アップロードの村井です。';
 	}
 
 
